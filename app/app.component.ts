@@ -30,11 +30,12 @@ const todos: Todo[]=[
 export class AppComponent{
 	title: string = 'angular 2do';
 	todos: Todo[]= todos;
+	newTodoTitle: string;
 
 	create(){
 		let todo: Todo = new Todo( this.newTodoTitle );
 		this.todos.push( todo );
-		// this.newTodoTitle ='';
+		 this.newTodoTitle ='';
 	}
 	toggle( todo: Todo ) {
 		todo.completed = !todo.completed 	
